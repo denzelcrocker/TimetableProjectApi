@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище P_ZelentsovAndroidS_ProjectModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "43P_ZelentsovAndroidS_Project.dbo.Actual_timetable" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Actual_timetable">
+          <Key>
+            <PropertyRef Name="Id_lesson" />
+          </Key>
+          <Property Name="Id_lesson" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Classroom" Type="nvarchar" MaxLength="50" />
+          <Property Name="Lesson" Type="nvarchar" MaxLength="50" />
+          <Property Name="Subgroup" Type="nvarchar" MaxLength="50" />
+          <Property Name="Count" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "43P_ZelentsovAndroidS_Project.dbo.Friday" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Friday">
+          <Key>
+            <PropertyRef Name="Id_lesson" />
+          </Key>
+          <Property Name="Id_lesson" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Lesson" Type="nvarchar" MaxLength="50" />
+          <Property Name="Classroom" Type="nvarchar" MaxLength="50" />
+          <Property Name="Teacher" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "43P_ZelentsovAndroidS_Project.dbo.Monday" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Monday">
+          <Key>
+            <PropertyRef Name="Id_lesson" />
+          </Key>
+          <Property Name="Id_lesson" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Lesson" Type="nvarchar" MaxLength="50" />
+          <Property Name="Classroom" Type="nvarchar" MaxLength="50" />
+          <Property Name="Teacher" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "43P_ZelentsovAndroidS_Project.dbo.Saturday" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Saturday">
+          <Key>
+            <PropertyRef Name="Id_lesson" />
+          </Key>
+          <Property Name="Id_lesson" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Lesson" Type="nvarchar" MaxLength="50" />
+          <Property Name="Classroom" Type="nvarchar" MaxLength="50" />
+          <Property Name="Teacher" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "43P_ZelentsovAndroidS_Project.dbo.Thursday" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Thursday">
+          <Key>
+            <PropertyRef Name="Id_lesson" />
+          </Key>
+          <Property Name="Id_lesson" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Lesson" Type="nvarchar" MaxLength="50" />
+          <Property Name="Classroom" Type="nvarchar" MaxLength="50" />
+          <Property Name="Teacher" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "43P_ZelentsovAndroidS_Project.dbo.Tuesday" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Tuesday">
+          <Key>
+            <PropertyRef Name="Id_lesson" />
+          </Key>
+          <Property Name="Id_lesson" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Lesson" Type="nvarchar" MaxLength="50" />
+          <Property Name="Classroom" Type="nvarchar" MaxLength="50" />
+          <Property Name="Teacher" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "43P_ZelentsovAndroidS_Project.dbo.Wednesday" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Wednesday">
+          <Key>
+            <PropertyRef Name="Id_lesson" />
+          </Key>
+          <Property Name="Id_lesson" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Lesson" Type="nvarchar" MaxLength="50" />
+          <Property Name="Classroom" Type="nvarchar" MaxLength="50" />
+          <Property Name="Teacher" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="Хранилище P_ZelentsovAndroidS_ProjectModelContainer">
+          <EntitySet Name="Actual_timetable" EntityType="Self.Actual_timetable" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Actual_timetable].[Id_lesson] AS [Id_lesson], 
+    [Actual_timetable].[Classroom] AS [Classroom], 
+    [Actual_timetable].[Lesson] AS [Lesson], 
+    [Actual_timetable].[Subgroup] AS [Subgroup], 
+    [Actual_timetable].[Count] AS [Count]
+    FROM [dbo].[Actual_timetable] AS [Actual_timetable]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Friday" EntityType="Self.Friday" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Friday].[Id_lesson] AS [Id_lesson], 
+    [Friday].[Lesson] AS [Lesson], 
+    [Friday].[Classroom] AS [Classroom], 
+    [Friday].[Teacher] AS [Teacher]
+    FROM [dbo].[Friday] AS [Friday]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Monday" EntityType="Self.Monday" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Monday].[Id_lesson] AS [Id_lesson], 
+    [Monday].[Lesson] AS [Lesson], 
+    [Monday].[Classroom] AS [Classroom], 
+    [Monday].[Teacher] AS [Teacher]
+    FROM [dbo].[Monday] AS [Monday]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Saturday" EntityType="Self.Saturday" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Saturday].[Id_lesson] AS [Id_lesson], 
+    [Saturday].[Lesson] AS [Lesson], 
+    [Saturday].[Classroom] AS [Classroom], 
+    [Saturday].[Teacher] AS [Teacher]
+    FROM [dbo].[Saturday] AS [Saturday]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Thursday" EntityType="Self.Thursday" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Thursday].[Id_lesson] AS [Id_lesson], 
+    [Thursday].[Lesson] AS [Lesson], 
+    [Thursday].[Classroom] AS [Classroom], 
+    [Thursday].[Teacher] AS [Teacher]
+    FROM [dbo].[Thursday] AS [Thursday]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Tuesday" EntityType="Self.Tuesday" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Tuesday].[Id_lesson] AS [Id_lesson], 
+    [Tuesday].[Lesson] AS [Lesson], 
+    [Tuesday].[Classroom] AS [Classroom], 
+    [Tuesday].[Teacher] AS [Teacher]
+    FROM [dbo].[Tuesday] AS [Tuesday]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Wednesday" EntityType="Self.Wednesday" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Wednesday].[Id_lesson] AS [Id_lesson], 
+    [Wednesday].[Lesson] AS [Lesson], 
+    [Wednesday].[Classroom] AS [Classroom], 
+    [Wednesday].[Teacher] AS [Teacher]
+    FROM [dbo].[Wednesday] AS [Wednesday]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="P_ZelentsovAndroidS_ProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Actual_timetable">
+          <Key>
+            <PropertyRef Name="Id_lesson" />
+          </Key>
+          <Property Name="Id_lesson" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Classroom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Lesson" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Subgroup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Count" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Friday">
+          <Key>
+            <PropertyRef Name="Id_lesson" />
+          </Key>
+          <Property Name="Id_lesson" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lesson" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Classroom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Teacher" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Monday">
+          <Key>
+            <PropertyRef Name="Id_lesson" />
+          </Key>
+          <Property Name="Id_lesson" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lesson" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Classroom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Teacher" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Saturday">
+          <Key>
+            <PropertyRef Name="Id_lesson" />
+          </Key>
+          <Property Name="Id_lesson" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lesson" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Classroom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Teacher" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Thursday">
+          <Key>
+            <PropertyRef Name="Id_lesson" />
+          </Key>
+          <Property Name="Id_lesson" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lesson" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Classroom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Teacher" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tuesday">
+          <Key>
+            <PropertyRef Name="Id_lesson" />
+          </Key>
+          <Property Name="Id_lesson" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lesson" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Classroom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Teacher" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Wednesday">
+          <Key>
+            <PropertyRef Name="Id_lesson" />
+          </Key>
+          <Property Name="Id_lesson" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lesson" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Classroom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Teacher" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Actual_timetable" EntityType="Self.Actual_timetable" />
+          <EntitySet Name="Friday" EntityType="Self.Friday" />
+          <EntitySet Name="Monday" EntityType="Self.Monday" />
+          <EntitySet Name="Saturday" EntityType="Self.Saturday" />
+          <EntitySet Name="Thursday" EntityType="Self.Thursday" />
+          <EntitySet Name="Tuesday" EntityType="Self.Tuesday" />
+          <EntitySet Name="Wednesday" EntityType="Self.Wednesday" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище P_ZelentsovAndroidS_ProjectModelContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="Actual_timetable">
+            <EntityTypeMapping TypeName="P_ZelentsovAndroidS_ProjectModel.Actual_timetable">
+              <MappingFragment StoreEntitySet="Actual_timetable">
+                <ScalarProperty Name="Id_lesson" ColumnName="Id_lesson" />
+                <ScalarProperty Name="Classroom" ColumnName="Classroom" />
+                <ScalarProperty Name="Lesson" ColumnName="Lesson" />
+                <ScalarProperty Name="Subgroup" ColumnName="Subgroup" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Friday">
+            <EntityTypeMapping TypeName="P_ZelentsovAndroidS_ProjectModel.Friday">
+              <MappingFragment StoreEntitySet="Friday">
+                <ScalarProperty Name="Id_lesson" ColumnName="Id_lesson" />
+                <ScalarProperty Name="Lesson" ColumnName="Lesson" />
+                <ScalarProperty Name="Classroom" ColumnName="Classroom" />
+                <ScalarProperty Name="Teacher" ColumnName="Teacher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Monday">
+            <EntityTypeMapping TypeName="P_ZelentsovAndroidS_ProjectModel.Monday">
+              <MappingFragment StoreEntitySet="Monday">
+                <ScalarProperty Name="Id_lesson" ColumnName="Id_lesson" />
+                <ScalarProperty Name="Lesson" ColumnName="Lesson" />
+                <ScalarProperty Name="Classroom" ColumnName="Classroom" />
+                <ScalarProperty Name="Teacher" ColumnName="Teacher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Saturday">
+            <EntityTypeMapping TypeName="P_ZelentsovAndroidS_ProjectModel.Saturday">
+              <MappingFragment StoreEntitySet="Saturday">
+                <ScalarProperty Name="Id_lesson" ColumnName="Id_lesson" />
+                <ScalarProperty Name="Lesson" ColumnName="Lesson" />
+                <ScalarProperty Name="Classroom" ColumnName="Classroom" />
+                <ScalarProperty Name="Teacher" ColumnName="Teacher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Thursday">
+            <EntityTypeMapping TypeName="P_ZelentsovAndroidS_ProjectModel.Thursday">
+              <MappingFragment StoreEntitySet="Thursday">
+                <ScalarProperty Name="Id_lesson" ColumnName="Id_lesson" />
+                <ScalarProperty Name="Lesson" ColumnName="Lesson" />
+                <ScalarProperty Name="Classroom" ColumnName="Classroom" />
+                <ScalarProperty Name="Teacher" ColumnName="Teacher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tuesday">
+            <EntityTypeMapping TypeName="P_ZelentsovAndroidS_ProjectModel.Tuesday">
+              <MappingFragment StoreEntitySet="Tuesday">
+                <ScalarProperty Name="Id_lesson" ColumnName="Id_lesson" />
+                <ScalarProperty Name="Lesson" ColumnName="Lesson" />
+                <ScalarProperty Name="Classroom" ColumnName="Classroom" />
+                <ScalarProperty Name="Teacher" ColumnName="Teacher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Wednesday">
+            <EntityTypeMapping TypeName="P_ZelentsovAndroidS_ProjectModel.Wednesday">
+              <MappingFragment StoreEntitySet="Wednesday">
+                <ScalarProperty Name="Id_lesson" ColumnName="Id_lesson" />
+                <ScalarProperty Name="Lesson" ColumnName="Lesson" />
+                <ScalarProperty Name="Classroom" ColumnName="Classroom" />
+                <ScalarProperty Name="Teacher" ColumnName="Teacher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
